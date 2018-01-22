@@ -1,8 +1,6 @@
 // Create a RetiredForagerBee class, in pseudoclassical style, with:
 var RetiredForagerBee = function() {
   // call the Bee superclass
-  // set the prototype
-  // set the constructor
   ForagerBee.call(this);
 
   // an age property that is set to 40
@@ -13,20 +11,16 @@ var RetiredForagerBee = function() {
   this.canFly = false;
   // a color property that is set to grey
   this.color = "grey";
-  // a food property that is inherited from grub
-  this.food =this.food;
-  // a treasureChest property inherited from ForagerBee that is 
-  // set to an empty array []
-  this.treasureChest = this.treasureChest;
 };
 
+  // set the prototype
+  RetiredForagerBee.prototype = Object.create(ForagerBee.prototype);
+  // set the constructor
+  RetiredForagerBee.prototype.constructor = RetiredForagerBee;
+  
 // a forage method that returns "I am too old, let me play cards instead"
 RetiredForagerBee.prototype.forage = function() {
   return 'I am too old, let me play cards instead';
-};
-
-// an eat method that is inherited from grub
-RetiredForagerBee.prototype.eat = function() {
 };
 
 // an always winning gamble method that allows the bee 
