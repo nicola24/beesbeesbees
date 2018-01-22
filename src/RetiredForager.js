@@ -31,6 +31,7 @@ RetiredForagerBee.prototype.eat = function() {
 
 // an always winning gamble method that allows the bee 
 // to add a treasure to the treasureChest
-RetiredForagerBee.prototype.gamble = function() {
-
+RetiredForagerBee.prototype.gamble = function(treasure) {
+  this.treasureChest.push(treasure)
+  }
 };
